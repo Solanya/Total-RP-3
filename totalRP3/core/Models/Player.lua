@@ -121,6 +121,9 @@ function Player:GetCustomColoredRoleplayingNamePrefixedWithIcon(iconSize)
 	local name, color, icon = self:GetRoleplayingName(), self:GetCustomColor(), self:GetCustomIcon();
 
 	if color ~= nil then
+		if TRP3_API.chat.configIncreaseNameColorContrast() then
+			color:LightenColorUntilItIsReadable();
+		end
 		name = color:WrapTextInColorCode(name);
 	end
 	if icon ~= nil then
