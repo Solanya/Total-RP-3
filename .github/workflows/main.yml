@@ -18,9 +18,8 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     - uses: marocchino/sticky-pull-request-comment@v1.4.0
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
+        repo-token: "${{ secrets.GITHUB_TOKEN }}"
         # comment message
         message: |
           Warning: This pull request is targeting master.
