@@ -24,4 +24,4 @@ jobs:
         message: |
           Warning: This pull request is targeting master.
         # set secrets.GITHUB_TOKEN here
-        GITHUB_TOKEN: secrets.GITHUB_TOKEN
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
